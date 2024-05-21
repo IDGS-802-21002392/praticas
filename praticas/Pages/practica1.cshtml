@@ -1,0 +1,17 @@
+﻿@page
+@model praticas.Pages.practica1Model
+@{
+}
+<h3>Calculadora de IMC</h3>
+<form method="post">
+	<p>Dame tu peso en KG: <input type="number" step="0.1" asp-for="peso" /></p>
+	<p>Dame tu estatura en metros: <input type="number" step="0.1" asp-for="estatura" /></p>
+	<p><input type="submit" value="Calcular" /></p>
+	@if (Model.imc != 0)
+	{
+		<div>
+			<strong>IMC = @Model.imc</strong>
+			<strong>@Model.Clasificacion</strong>
+		</div>
+	}
+</form>

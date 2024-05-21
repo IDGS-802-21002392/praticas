@@ -1,0 +1,20 @@
+﻿@page
+@model praticas.Pages.practica2Model
+@{
+}
+<h3>Cifrador César</h3>
+
+<form method="post">
+    <label for="txtMensaje">Mensaje:</label><br />
+    <textarea id="txtMensaje" name="Mensaje" step="0.1">@Model.Mensaje</textarea><br />
+    <label for="txtN">Valor de n:</label>
+    <input type="number" id="txtN" name="N" value="@Model.N" /><br />
+    <button type="submit" name="action" value="Codificar">Codificar</button>
+    <button type="submit" name="action" value="Decodificar">Decodificar</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Resultado))
+{
+    <h2>Resultado:</h2>
+    <p>@Model.Resultado</p>
+}

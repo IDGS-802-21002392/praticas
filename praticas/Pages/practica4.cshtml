@@ -1,0 +1,19 @@
+﻿@page
+@model praticas.Pages.practica4Model
+@{
+
+}
+
+<h3>Arreglo</h3>
+<strong>
+    @foreach (var numero in Model.NumerosAleatorios)
+    {
+        <span>@numero</span>
+    }
+</strong>
+<br />
+<h3>Resultados:</h3>
+<p>Suma de los números: @Model.Suma</p>
+<p>Media aritmética: @Model.Promedio</p>
+<p>Moda: @Model.Moda</p>
+<p>Mediana: @Model.Mediana</p>
